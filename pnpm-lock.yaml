@@ -41,12 +41,21 @@ importers:
       react-dom:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
+      react-exposed-states:
+        specifier: ^1.0.4
+        version: 1.0.4
+      react-shared-states:
+        specifier: ^1.0.21
+        version: 1.0.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       tailwindcss:
         specifier: ^4.1.14
         version: 4.1.14
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
+      use-effect-skip-first:
+        specifier: ^0.1.1
+        version: 0.1.1
       vite:
         specifier: ^7.1.9
         version: 7.1.9(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)
@@ -1232,12 +1241,24 @@ packages:
     peerDependencies:
       react: ^19.2.0
 
+  react-exposed-states@1.0.4:
+    resolution: {integrity: sha512-yrVeVytrYjPUEu8Aqq5ajZHMzi6myDOYVL3lmfEO+uq7ZuyLKLe7Qx8GLvhAki6zrXQIgAdTY3Exu5sejsKKuw==}
+
+  react-fast-compare@3.2.2:
+    resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
+
   react-is@17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
 
   react-refresh@0.17.0:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
+
+  react-shared-states@1.0.21:
+    resolution: {integrity: sha512-i6dvVEZvX/5BTGzR3BLRxvhZZ5aSiP0Bkdc2YFk2cLKNgdAAzWuGT2XqQ5BJE5LaXxtq3P3x0BBiZ38Pkhv7cA==}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
 
   react@19.2.0:
     resolution: {integrity: sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==}
@@ -1397,6 +1418,9 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+
+  use-effect-skip-first@0.1.1:
+    resolution: {integrity: sha512-kSphFHRzwc8oG8G3tGjqILzh8UQgBBwLwfPASHozfBXeMSumndLaxJWL1Z8EJbXA6PHsbyfqVE8bKS7BlAus8g==}
 
   vite-node@3.2.4:
     resolution: {integrity: sha512-EbKSKh+bh1E1IFxeO0pg1n4dvoOTt0UDiXMd/qn++r98+jPO1xtJilvXldeuQ8giIB5IkpjCgMleHMNEsGH6pg==}
@@ -2634,9 +2658,21 @@ snapshots:
       react: 19.2.0
       scheduler: 0.27.0
 
+  react-exposed-states@1.0.4:
+    dependencies:
+      classnames: 2.5.1
+
+  react-fast-compare@3.2.2: {}
+
   react-is@17.0.2: {}
 
   react-refresh@0.17.0: {}
+
+  react-shared-states@1.0.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+    dependencies:
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+      react-fast-compare: 3.2.2
 
   react@19.2.0: {}
 
@@ -2780,6 +2816,8 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  use-effect-skip-first@0.1.1: {}
 
   vite-node@3.2.4(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1):
     dependencies:

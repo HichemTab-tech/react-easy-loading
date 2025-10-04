@@ -14,13 +14,14 @@
   ],
   "main": "dist/main.min.js",
   "module": "dist/main.esm.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/main.esm.js",
-      "require": "./dist/main.min.js"
+      "require": "./dist/main.min.js",
+      "types": "./dist/index.d.ts"
     }
   },
-  "types": "dist/index.d.ts",
   "scripts": {
     "build": "vite build",
     "bump": "node scripts/bumper.js",
@@ -51,8 +52,11 @@
     "jsdom": "^27.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-exposed-states": "^1.0.4",
+    "react-shared-states": "^1.0.21",
     "tailwindcss": "^4.1.14",
     "typescript": "^5.9.3",
+    "use-effect-skip-first": "^0.1.1",
     "vite": "^7.1.9",
     "vite-plugin-banner": "^0.8.1",
     "vite-plugin-css-injected-by-js": "^3.5.2",
