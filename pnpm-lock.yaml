@@ -42,11 +42,11 @@ importers:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
       react-exposed-states:
-        specifier: ^1.0.4
-        version: 1.0.4
+        specifier: ^1.0.5
+        version: 1.0.5
       react-shared-states:
-        specifier: ^1.0.21
-        version: 1.0.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: ^1.0.22
+        version: 1.0.22(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       tailwindcss:
         specifier: ^4.1.14
         version: 4.1.14
@@ -54,8 +54,8 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       use-effect-skip-first:
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       vite:
         specifier: ^7.1.9
         version: 7.1.9(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)
@@ -1241,8 +1241,8 @@ packages:
     peerDependencies:
       react: ^19.2.0
 
-  react-exposed-states@1.0.4:
-    resolution: {integrity: sha512-yrVeVytrYjPUEu8Aqq5ajZHMzi6myDOYVL3lmfEO+uq7ZuyLKLe7Qx8GLvhAki6zrXQIgAdTY3Exu5sejsKKuw==}
+  react-exposed-states@1.0.5:
+    resolution: {integrity: sha512-jAn6xrikXE4iktBkvZCC2+8cmZI+v+8wuHM1CsGXDrJ/XycALxIeupbpL0iIBHGT6UBt5SMrnJDwqxG2uIidSw==}
 
   react-fast-compare@3.2.2:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
@@ -1254,8 +1254,8 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
-  react-shared-states@1.0.21:
-    resolution: {integrity: sha512-i6dvVEZvX/5BTGzR3BLRxvhZZ5aSiP0Bkdc2YFk2cLKNgdAAzWuGT2XqQ5BJE5LaXxtq3P3x0BBiZ38Pkhv7cA==}
+  react-shared-states@1.0.22:
+    resolution: {integrity: sha512-cd52nTcv783iW98x+Zd213HZaDIQ2rQM8qws8DJT8TfghyT8VcifNbU5T/eUfR3oMCDNvg9XiNkh2s2y4+eknw==}
     peerDependencies:
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
@@ -1419,8 +1419,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  use-effect-skip-first@0.1.1:
-    resolution: {integrity: sha512-kSphFHRzwc8oG8G3tGjqILzh8UQgBBwLwfPASHozfBXeMSumndLaxJWL1Z8EJbXA6PHsbyfqVE8bKS7BlAus8g==}
+  use-effect-skip-first@0.1.2:
+    resolution: {integrity: sha512-L2zIeUd7k6dXPWZ0GoXIHEKm89HCR+LG9QIZJ/1VfTZ0+zrFvCUCf1lgZ+1VQH7NeBg8ZAC6T3goHovzuvcBQA==}
 
   vite-node@3.2.4:
     resolution: {integrity: sha512-EbKSKh+bh1E1IFxeO0pg1n4dvoOTt0UDiXMd/qn++r98+jPO1xtJilvXldeuQ8giIB5IkpjCgMleHMNEsGH6pg==}
@@ -2658,7 +2658,7 @@ snapshots:
       react: 19.2.0
       scheduler: 0.27.0
 
-  react-exposed-states@1.0.4:
+  react-exposed-states@1.0.5:
     dependencies:
       classnames: 2.5.1
 
@@ -2668,7 +2668,7 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-  react-shared-states@1.0.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  react-shared-states@1.0.22(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
@@ -2817,7 +2817,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  use-effect-skip-first@0.1.1: {}
+  use-effect-skip-first@0.1.2: {}
 
   vite-node@3.2.4(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1):
     dependencies:
