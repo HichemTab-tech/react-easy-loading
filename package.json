@@ -1,34 +1,62 @@
 {
-  "name": "npm-package-skeleton",
+  "name": "react-easy-loading",
   "version": "0.1.0",
   "type": "module",
   "description": "",
   "keywords": [
-    "package-skeleton",
-    "npm-package-skeleton",
-    "npm-package",
-    "skeleton",
-    "npm",
-    "package"
+    "react",
+    "surveyjs",
+    "survey-js",
+    "survey",
+    "creator",
+    "react-package",
+    "react-library"
   ],
+  "main": "dist/main.min.js",
+  "module": "dist/main.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/main.esm.js",
+      "require": "./dist/main.min.js"
+    }
+  },
+  "types": "dist/index.d.ts",
   "scripts": {
-    "setup": "npm install && node scripts/setup.mjs"
+    "build": "vite build",
+    "bump": "node scripts/bumper.js",
+    "test": "vitest",
+    "preview": "vite preview",
+    "dev:demo": "vite --config demo/vite.config.demo.ts",
+    "build:demo": "vite build --config demo/vite.config.demo.ts"
   },
-  "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "author": "Hichem Taboukouyout <hichem.tab2002@gmail.com>",
+  "author": "Hichem Taboukouyout <hichem.taboukouyout@hichemtab-tech.me>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HichemTab-tech/npm-package-skeleton.git"
+    "url": "git+https://github.com/HichemTab-tech/react-easy-loading.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HichemTab-tech/npm-package-skeleton/issues"
+    "url": "https://github.com/HichemTab-tech/react-easy-loading/issues"
   },
-  "homepage": "https://github.com/HichemTab-tech/npm-package-skeleton#readme",
-  "dependencies": {
-    "prompts": "^2.4.2"
+  "homepage": "https://github.com/HichemTab-tech/react-easy-loading#readme",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^24.6.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "classnames": "^2.5.1",
+    "jsdom": "^27.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9",
+    "vite-plugin-banner": "^0.8.1",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^3.2.4"
   }
 }
