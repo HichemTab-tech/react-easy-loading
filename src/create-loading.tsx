@@ -42,7 +42,7 @@ export type Loading<Errors extends unknown[] = string[], Context extends Record<
     getContext: () => Context | undefined;
     // setters
     set(state: LoadingState): void;
-    retry: () => void;
+    retry: (defaultRetry?: () => void) => void;
     reset: () => void;
     addError: (error: Errors[number]) => void;
     setContext: (context: Context) => void;
@@ -130,7 +130,7 @@ export const createLoading = <Errors extends unknown[] = string[], Context exten
         useErrors: () => useSharedStateSelector(sharedState, (ss) => ss.errors),
         useContext: () => useSharedStateSelector(sharedState, (ss) => ss.context),
         set: (state) => sharedStatesApi.update(sharedState, (s) => ({...s, state})),
-        retry: () => sharedStatesApi.get(sharedState).retry?.(),
+        retry: (defaultRetry) => (sharedStatesApi.get(sharedState).retry ?? defaultRetry)?.(),
         // getters
         isLoading: () => sharedStatesApi.get(sharedState).state === "loading",
         isIdle: () => sharedStatesApi.get(sharedState).state === "idle",
