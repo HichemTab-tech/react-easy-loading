@@ -106,6 +106,29 @@ function Avatar() {
 }
 ```
 
+## Local Loading State
+
+Sometimes you want a loading state that is tied to the lifecycle of a component
+(just like useState).
+`useCreateLocalLoading` creates a loading instance that is automatically destroyed when the component unmounts.
+
+```javascript
+import { useCreateLocalLoading } from 'react-easy-loading';
+
+function MyComponent() {
+  const loading = useCreateLocalLoading();
+  
+  // Use it just like a regular loading instance
+  const isLoading = loading.useIsLoading();
+
+  return (
+    <div>
+      {isLoading ? 'Loading...' : 'Done'}
+    </div>
+  );
+}
+```
+
 ## ✨ Automatic State Management with `wrap`
 
 The `wrap` function automates state management.
@@ -269,14 +292,15 @@ Use these to get the current value without subscribing to updates.
 
 Use these to control the state from anywhere.
 
-| Method              | Description                                |
-|---------------------|--------------------------------------------|
-| `set(state)`        | Manually sets the loading state.           |
-| `reset()`           | Resets the state to its initial value.     |
-| `retry()`           | Re-runs the last wrapped async function.   |
-| `setRetry(fn)`      | Manually provides a custom retry function. |
-| `setErrors(errors)` | Overwrites the errors array.               |
-| `addError(error)`   | Adds an error to the errors array.         |
+| Method              | Description                                         |
+|---------------------|-----------------------------------------------------|
+| `set(state)`        | Manually sets the loading state.                    |
+| `reset()`           | Resets the state to its initial value.              |
+| `retry()`           | Re-runs the last wrapped async function.            |
+| `setRetry(fn)`      | Manually provides a custom retry function.          |
+| `setErrors(errors)` | Overwrites the errors array.                        |
+| `addError(error)`   | Adds an error to the errors array.                  |
+| `destroy()`         | Destroys the loading instance and clears its state. |
 
 ---
 

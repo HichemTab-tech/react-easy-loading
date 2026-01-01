@@ -3,9 +3,9 @@ import {
     createLoading,
     type LoadingState,
     registerDefaultFallback,
-    registerFallback
+    registerFallback, useCreateLocalLoading
 } from 'react-easy-loading';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {expose} from "react-exposed-states";
 import {useEffectSkipFirst} from "use-effect-skip-first";
 
@@ -62,6 +62,42 @@ const Component = () => {
     )
 }
 
+const Component2Wrapper = () => {
+    const [yes, setYes] = useState(false);
+
+    const handle = () => {
+        setYes(v => !v);
+    }
+
+    return (
+        <div>
+            <p>local one wrapper</p>
+            <button onClick={handle}>Show</button>
+            {yes ? <Component2/> : "NONE"}
+        </div>
+    )
+}
+
+const Component2 = () => {
+    const loading = useCreateLocalLoading();
+    const l = loading.use();
+
+    const handle = async () => {
+        loading.set(loading.get() === "loading" ? "success" : "loading");
+    }
+
+    useEffect(() => {
+        console.log("l", l, loading.__get__id());
+    }, [l]);
+
+    return (
+        <div>
+            <p>local one {l}</p>
+            <button onClick={handle}>Click me</button>
+        </div>
+    )
+}
+
 const App = () => {
 
 
@@ -70,6 +106,7 @@ const App = () => {
         <div>
             <h1 className="text-red-600">React Easy Loading Demo</h1>
             <Component/>
+            <Component2Wrapper/>
 
             <userLoading.ShowWhenFinish>
                 <h3>DONE</h3>
