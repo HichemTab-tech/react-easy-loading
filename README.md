@@ -117,6 +117,8 @@ import { useCreateLocalLoading } from 'react-easy-loading';
 
 function MyComponent() {
   const loading = useCreateLocalLoading();
+  // You can pass options or just the initial state (by default it's loading)
+  //const loading = useCreateLocalLoading('idle');
   
   // Use it just like a regular loading instance
   const isLoading = loading.useIsLoading();
