@@ -70,6 +70,14 @@ export type Loading<Errors extends unknown[] = string[], Context extends Record<
         children?: ReactNodeOrFunction<[errors: Errors | undefined, retry: (() => void) | undefined]> | undefined;
     }>;
     ShowWhen: React.FC<PropsWithChildren<{ state: LoadingState }>>;
+    destroy: () => void;
+    /**
+     * @internal THIS IS USED FOR INTERNAL PURPOSES ONLY,
+     * DON'T USE IT,
+     * DON'T RELY ON IT,
+     * DON'T REPORT ANY ISSUE RELATED TO IT
+     */
+    __get__id: () => string;
 }
 
 export type CreateLoadingOptions = {
@@ -268,6 +276,18 @@ export const createLoading = <Errors extends unknown[] = string[], Context exten
             const Component = showWhenFactory(state);
             return <Component>{children}</Component>
         },
+        destroy: () => {
+            sharedStatesApi.clear(sharedState)
+        },
+        /**
+         * @internal THIS IS USED FOR INTERNAL PURPOSES ONLY,
+         * DON'T USE IT,
+         * DON'T RELY ON IT,
+         * DON'T REPORT ANY ISSUE RELATED TO IT
+         */
+        __get__id: () => {
+            return `loading_id//${sharedState.prefix}/${sharedState.key}`
+        }
     }
 
     return loading;
