@@ -9,6 +9,11 @@ describe('useCreateLocalLoading', () => {
         expect(result.current.get()).toBe('loading'); // Default is loading
     });
 
+    it('should accept initialState as a string', () => {
+        const { result } = renderHook(() => useCreateLocalLoading('idle'));
+        expect(result.current.get()).toBe('idle');
+    });
+
     it('should destroy the loading instance on unmount', () => {
         const { result, unmount } = renderHook(() => useCreateLocalLoading());
         const loading = result.current;
