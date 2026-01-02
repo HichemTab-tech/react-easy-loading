@@ -77,7 +77,7 @@ export type Loading<Errors extends unknown[] = string[], Context extends Record<
      * DON'T RELY ON IT,
      * DON'T REPORT ANY ISSUE RELATED TO IT
      */
-    __get__id: () => string;
+    __get__id: () => any;
 }
 
 export type CreateLoadingOptions = {
@@ -286,7 +286,10 @@ export const createLoading = <Errors extends unknown[] = string[], Context exten
          * DON'T REPORT ANY ISSUE RELATED TO IT
          */
         __get__id: () => {
-            return `loading_id//${sharedState.prefix}/${sharedState.key}`
+            return {
+                loadingId: `loading_id//${sharedState.prefix}/${sharedState.key}`,
+                ...loading.__get__id()
+            }
         }
     }
 
