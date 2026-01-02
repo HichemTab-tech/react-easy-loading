@@ -288,7 +288,7 @@ export const createLoading = <Errors extends unknown[] = string[], Context exten
         __get__id: () => {
             return {
                 loadingId: `loading_id//${sharedState.prefix}/${sharedState.key}`,
-                ...loading.__get__id()
+                ...sharedStatesApi.__log_instance_id()
             }
         }
     }
