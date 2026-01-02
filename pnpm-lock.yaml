@@ -45,8 +45,8 @@ importers:
         specifier: ^1.0.5
         version: 1.0.5
       react-shared-states:
-        specifier: ^2.1.2
-        version: 2.1.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        specifier: 2.1.4-beta
+        version: 2.1.4-beta(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       tailwindcss:
         specifier: ^4.1.18
         version: 4.1.18
@@ -1238,8 +1238,8 @@ packages:
     resolution: {integrity: sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==}
     engines: {node: '>=0.10.0'}
 
-  react-shared-states@2.1.2:
-    resolution: {integrity: sha512-pr+4dOMiCbaZgridv0A5nNM1uKtz7S8TTLDGu9kCZ9myVb7wNH3U8YAiwfgwVJEJnq23SbKrygPogZ0PKLaE8A==}
+  react-shared-states@2.1.4-beta:
+    resolution: {integrity: sha512-hYIoqfCmbz7I/uaVxPlGpJbVAOJQeH15eYUostzbeYaBDwT4Gs/f/hNdxF2RbborsTr0X7CbgZNQPXrYpOX1bg==}
     peerDependencies:
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
@@ -2600,7 +2600,7 @@ snapshots:
 
   react-refresh@0.18.0: {}
 
-  react-shared-states@2.1.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  react-shared-states@2.1.4-beta(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
